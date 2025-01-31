@@ -40,7 +40,7 @@ const page = () => {
           <Image src="/bitpanda.svg" className='opacity-50' alt='Icon-BitPanda' width={125} height={35}></Image>
         </div>
 
-        <div className='mt-2 relative w-[320px] h-[220px] mx-auto'>
+        <div className='mt-2 relative w-[340px] h-[220px] mx-auto z-20'>
           <Image 
             src="/laptop.svg" 
             alt='Icon-Laptop' 
@@ -48,13 +48,18 @@ const page = () => {
             height={220}
             className="w-full h-full object-contain"
           />
-        
+
           <iframe 
-            className='absolute z-10 w-[260px] h-[165px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' 
+            className='absolute w-[275px] h-[175px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' 
             src='https://www.youtube.com/embed/mPLG1Q-Hm2Q?si=YwjAwOTxIbZdLtA4'
             frameBorder="0" 
             allowFullScreen>
           </iframe>
+        </div>
+
+        <div 
+          style={{ backgroundImage: 'url(/BG2.svg)' }} 
+          className='relative -mt-16 w-full h-full z-10'>
         </div>
 
       </div>

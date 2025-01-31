@@ -4,7 +4,7 @@ import React from 'react'
 const page = () => {
   return (
     <main className='w-screen h-screen'>
-      <div style={{backgroundImage: 'url(/BG.svg)'}} className='overflow-scroll md:overflow-hidden w-screen h-screen bg-fixed bg-center'>
+      <div style={{backgroundImage: 'url(/BG.svg)'}} className='overflow-scroll w-screen h-screen bg-fixed bg-center'>
         <div className='flex justify-between py-5 px-4 items-center'>
           <div>
             <Image src="/Logo.svg" alt='Logo-Hub2' width={90} height={30}></Image>
@@ -40,9 +40,23 @@ const page = () => {
           <Image src="/bitpanda.svg" className='opacity-50' alt='Icon-BitPanda' width={125} height={35}></Image>
         </div>
 
-        <div>
-          <Image src="/laptop.svg" className='opacity-50' alt='Icon-Laptop' width={125} height={35}></Image>
+        <div className='mt-2 relative w-[320px] h-[220px] mx-auto'>
+          <Image 
+            src="/laptop.svg" 
+            alt='Icon-Laptop' 
+            width={390} 
+            height={220}
+            className="w-full h-full object-contain"
+          />
+        
+          <iframe 
+            className='absolute z-10 w-[260px] h-[165px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' 
+            src='https://www.youtube.com/embed/mPLG1Q-Hm2Q?si=YwjAwOTxIbZdLtA4'
+            frameBorder="0" 
+            allowFullScreen>
+          </iframe>
         </div>
+
       </div>
     </main>
   )

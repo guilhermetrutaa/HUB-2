@@ -4,7 +4,7 @@ import React from 'react'
 const page = () => {
   return (
     <main className='w-screen h-screen'>
-      <div style={{backgroundImage: 'url(/BG.svg)'}} className='overflow-scroll w-screen h-screen bg-fixed bg-center'>
+      <div style={{backgroundImage: 'url(/BG.svg)'}} className='overflow-scroll w-screen h-screen bg-fixed bg-center bg-cover'>
         <div className='flex justify-between py-5 px-4 items-center'>
           <div>
             <Image src="/Logo.svg" alt='Logo-Hub2' width={90} height={30}></Image>
@@ -88,6 +88,25 @@ const page = () => {
           </div>
         </div>
 
+        <div style={{ backgroundImage: 'url(/BG3.svg)' }} className='w-full h-full bg-cover bg-center'>
+          <div className='pt-9'>
+            <div className='flex justify-center items-center'>
+              <h2 className='text-[2rem] font-semibold max-w-[14rem] text-center leading-[2rem]'>Lorem ipsum <span className='text-[#009FE3]'>sit amet</span></h2>
+            </div>
+            <div className='flex justify-center items-center pt-9'>
+              <Image src="/clock.svg" alt='Icon-Clock' width={50} height={50}></Image>
+            </div>
+            <div className='flex justify-center items-center pt-4'>
+              <p className='text-[1rem] text-[#959595] max-w-[10rem] text-center'>nterdum, ac aliquet odio m</p>
+            </div>
+            <div className='flex justify-center items-center pt-8'>
+              <Image src="/cifrao.svg" alt='Icon-Cifrao' width={33} height={50}></Image>
+            </div>
+            <div className='flex justify-center items-center pt-4'> 
+              <p className='text-[1rem] text-[#959595] max-w-[10rem] text-center'>nterdum, ac aliquet odio m</p>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   )

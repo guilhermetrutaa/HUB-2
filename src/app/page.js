@@ -57,7 +57,7 @@ const page = () => {
           </iframe>
         </div>
 
-        <div style={{ backgroundImage: 'url(/BG2.svg)' }} className='relative -mt-[5rem] w-full h-full z-10'>
+        <div style={{ backgroundImage: 'url(/BG2.svg)' }} className='relative -mt-[5rem] w-full min-h-screen z-10 bg-cover'>
           <div className='pt-20'>
             <div className='flex justify-center items-center'>
               <h2 className='text-[2rem] max-w-[14rem] text-center font-bold leading-[2rem]'>Dê adeus a burocracia de aprovação</h2>
@@ -73,14 +73,18 @@ const page = () => {
             <div className='flex justify-center items-center pt-5'>
               <Image src="/painel.svg" alt='Painel' width={300} height={209}></Image>
             </div>
-            <div>
-              <p>vulputate libero et velit interdum</p>
-              <p>Nunc <span>vulputate libero et velit interdum</span>, ac aliquet odio matti’s. Class aptent taciti <span>sociosqu ad</span></p>
+            <div className='pt-8 mx-4'>
+              <p className='text-[1rem] font-bold text-[#000]/75 max-w-[12rem]'>vulputate libero et velit interdum</p>
+              <br/>
+              <p className='max-w-[18rem] text-[#000]/75'>Nunc <span className='font-bold'>vulputate libero et velit interdum</span>, ac aliquet odio matti’s. Class aptent taciti <span className='font-bold'>sociosqu ad</span></p>
             </div>
-            <div>
-              <p>vulputate libero et velit interdum</p>
-              <p>Nunc <span>vulputate libero et velit interdum</span>, ac aliquet odio matti’s. Class aptent taciti <span>sociosqu ad</span></p>
+            <div className='border-b-2 border-[#000]/10 pt-4'></div>
+            <div className='pt-8 mx-4'>
+              <p className='text-[1rem] font-bold text-[#000]/75 max-w-[12rem]'>vulputate libero et velit interdum</p>
+              <br/>
+              <p className='max-w-[18rem] text-[#000]/75'>Nunc <span className='font-bold'>vulputate libero et velit interdum</span>, ac aliquet odio matti’s. Class aptent taciti <span className='font-bold'>sociosqu ad</span></p>
             </div>
+            <div className='border-b-2 border-[#000]/10 pt-4'></div>
           </div>
         </div>
 

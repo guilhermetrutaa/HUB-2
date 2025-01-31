@@ -40,7 +40,7 @@ const page = () => {
           <Image src="/bitpanda.svg" className='opacity-50' alt='Icon-BitPanda' width={125} height={35}></Image>
         </div>
 
-        <div className='mt-2 relative w-[340px] h-[220px] mx-auto z-20'>
+        <div className='mt-2 relative w-[300px] h-[220px] mx-auto z-20'>
           <Image 
             src="/laptop.svg" 
             alt='Icon-Laptop' 
@@ -50,16 +50,38 @@ const page = () => {
           />
 
           <iframe 
-            className='absolute w-[275px] h-[175px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' 
+            className='absolute w-[242px] h-[153px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' 
             src='https://www.youtube.com/embed/mPLG1Q-Hm2Q?si=YwjAwOTxIbZdLtA4'
             frameBorder="0" 
             allowFullScreen>
           </iframe>
         </div>
 
-        <div 
-          style={{ backgroundImage: 'url(/BG2.svg)' }} 
-          className='relative -mt-16 w-full h-full z-10'>
+        <div style={{ backgroundImage: 'url(/BG2.svg)' }} className='relative -mt-[5rem] w-full h-full z-10'>
+          <div className='pt-20'>
+            <div className='flex justify-center items-center'>
+              <h2 className='text-[2rem] max-w-[14rem] text-center font-bold leading-[2rem]'>Dê adeus a burocracia de aprovação</h2>
+            </div>
+            <div className='pt-8 mx-4'>
+              <p className='text-[1rem] font-bold text-[#000]/75 max-w-[12rem]'>vulputate libero et velit interdum</p>
+              <br/>
+              <p className='max-w-[18rem] text-[#000]/75'>Nunc <span className='font-bold'>vulputate libero et velit interdum</span>, ac aliquet odio matti’s. Class aptent taciti <span className='font-bold'>sociosqu ad</span></p>
+            </div>
+            <div className='border-b-2 border-[#000]/10 pt-4'>
+              <Image src="/rectangle.svg" alt='Rectangle' width={235} height={3}></Image>
+            </div>
+            <div className='flex justify-center items-center pt-5'>
+              <Image src="/painel.svg" alt='Painel' width={300} height={209}></Image>
+            </div>
+            <div>
+              <p>vulputate libero et velit interdum</p>
+              <p>Nunc <span>vulputate libero et velit interdum</span>, ac aliquet odio matti’s. Class aptent taciti <span>sociosqu ad</span></p>
+            </div>
+            <div>
+              <p>vulputate libero et velit interdum</p>
+              <p>Nunc <span>vulputate libero et velit interdum</span>, ac aliquet odio matti’s. Class aptent taciti <span>sociosqu ad</span></p>
+            </div>
+          </div>
         </div>
 
       </div>

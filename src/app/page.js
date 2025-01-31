@@ -18,7 +18,7 @@ const page = () => {
         </div>
         <div>
           <div className='flex justify-center items-center mt-14'>
-            <Image src="/Image-one.svg" alt='Icon-Menu' width={250} height={330}></Image>
+            <Image src="/Image-one.svg" alt='ImageOne' width={250} height={330}></Image>
           </div>
         </div>
 
@@ -41,7 +41,7 @@ const page = () => {
         </div>
 
         <div>
-          <Image src="/laptop.svg" className='opacity-50' alt='Icon-BitPanda' width={125} height={35}></Image>
+          <Image src="/laptop.svg" className='opacity-50' alt='Icon-Laptop' width={125} height={35}></Image>
         </div>
       </div>
     </main>

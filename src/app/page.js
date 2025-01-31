@@ -3,8 +3,8 @@ import React from 'react'
 
 const page = () => {
   return (
-    <main className='w-screen h-screen'>
-      <div style={{backgroundImage: 'url(/BG.svg)'}} className='overflow-scroll w-screen h-screen bg-fixed bg-center bg-cover'>
+    <main className='w-full h-full'>
+      <div style={{backgroundImage: 'url(/BG.svg)'}} className='overflow-scroll w-screen h-screen bg-no-repeat bg-center'>
         <div className='flex justify-between py-5 px-4 items-center'>
           <div>
             <Image src="/Logo.svg" alt='Logo-Hub2' width={90} height={30}></Image>
@@ -57,7 +57,7 @@ const page = () => {
           </iframe>
         </div>
 
-        <div style={{ backgroundImage: 'url(/BG2.svg)' }} className='relative -mt-[5rem] w-full min-h-screen z-10 bg-cover'>
+        <div style={{ backgroundImage: 'url(/BG2.svg)' }} className='relative -mt-[5rem] w-full min-h-full z-10 bg-cover'>
           <div className='pt-20'>
             <div className='flex justify-center items-center'>
               <h2 className='text-[2rem] max-w-[14rem] text-center font-bold leading-[2rem]'>Dê adeus a burocracia de aprovação</h2>
@@ -107,6 +107,8 @@ const page = () => {
             </div>
           </div>
         </div>
+
+        
       </div>
     </main>
   )

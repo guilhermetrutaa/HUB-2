@@ -88,27 +88,45 @@ const page = () => {
           </div>
         </div>
 
-        <div style={{ backgroundImage: 'url(/BG3.svg)' }} className='w-full h-full bg-cover bg-center'>
-          <div className='pt-9'>
+        <div className='relative'>
+          <div style={{ backgroundImage: 'url(/BG3.svg)' }} className='w-full h-full bg-cover bg-center'>
+            <div className='pt-9'>
+              <div className='flex justify-center items-center'>
+                <h2 className='text-[2rem] font-semibold max-w-[14rem] text-center leading-[2rem]'>Lorem ipsum <span className='text-[#009FE3]'>sit amet</span></h2>
+              </div>
+              <div className='flex justify-center items-center pt-9'>
+                <Image src="/clock.svg" alt='Icon-Clock' width={50} height={50}></Image>
+              </div>
+              <div className='flex justify-center items-center pt-4'>
+                <p className='text-[1rem] text-[#959595] max-w-[10rem] text-center'>nterdum, ac aliquet odio m</p>
+              </div>
+              <div className='flex justify-center items-center pt-8'>
+                <Image src="/cifrao.svg" alt='Icon-Cifrao' width={33} height={50}></Image>
+              </div>
+              <div className='flex justify-center items-center pt-4 pb-10'> 
+                <p className='text-[1rem] text-[#959595] max-w-[10rem] text-center'>nterdum, ac aliquet odio m</p>
+              </div>
+            </div>
+          </div>
+
+          <div className='absolute top-[24.5rem] right-0 mr-5'>
+              <Image src="/detalhe.svg" alt='Painel' width={72} height={87}></Image>
+            </div>
+
+          <div style={{ backgroundImage: 'url(/BG4.svg)' }} className='w-full h-full bg-cover bg-center'>
+            <div className='flex justify-center items-center '>
+              <p className='text-[0.68rem] text-[#888] tracking-[0.10rem] pt-12'>FEEDBACKS</p>
+            </div>
+
             <div className='flex justify-center items-center'>
-              <h2 className='text-[2rem] font-semibold max-w-[14rem] text-center leading-[2rem]'>Lorem ipsum <span className='text-[#009FE3]'>sit amet</span></h2>
+              <h1 className='text-[2rem] text-center font-bold text-[#fff] leading-[2rem] max-w-[15rem]'>O que estão dizendo <span className='text-[#888]'>sobre o Hub2 Client</span></h1>
             </div>
-            <div className='flex justify-center items-center pt-9'>
-              <Image src="/clock.svg" alt='Icon-Clock' width={50} height={50}></Image>
-            </div>
-            <div className='flex justify-center items-center pt-4'>
-              <p className='text-[1rem] text-[#959595] max-w-[10rem] text-center'>nterdum, ac aliquet odio m</p>
-            </div>
-            <div className='flex justify-center items-center pt-8'>
-              <Image src="/cifrao.svg" alt='Icon-Cifrao' width={33} height={50}></Image>
-            </div>
-            <div className='flex justify-center items-center pt-4'> 
-              <p className='text-[1rem] text-[#959595] max-w-[10rem] text-center'>nterdum, ac aliquet odio m</p>
+
+            <div className='flex justify-center items-center'>
+              <p className='text-[#fff] text-[1rem] font-light text-center max-w-[15rem] pt-3'>Lorem ipsum dolor sit amet consectetur.</p>
             </div>
           </div>
         </div>
-
-        
       </div>
     </main>
   )

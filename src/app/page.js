@@ -110,7 +110,7 @@ const page = () => {
           </div>
 
           <div className='absolute top-[24.5rem] right-0 mr-5'>
-              <Image src="/detalhe.svg" alt='Detalhe' width={72} height={87}></Image>
+              <Image src="/Detalhe.svg" alt='Detalhe' width={72} height={87}></Image>
             </div>
 
           <div style={{ backgroundImage: 'url(/BG4.svg)' }} className='w-full h-full bg-cover bg-center'>

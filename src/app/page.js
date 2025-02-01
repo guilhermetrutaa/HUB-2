@@ -1,3 +1,4 @@
+import CardSlider from '@/components/CardSlider'
 import Image from 'next/image'
 import React from 'react'
 
@@ -124,6 +125,10 @@ const page = () => {
 
             <div className='flex justify-center items-center'>
               <p className='text-[#fff] text-[1rem] font-light text-center max-w-[15rem] pt-3'>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+
+            <div>
+              <CardSlider/>
             </div>
           </div>
         </div>

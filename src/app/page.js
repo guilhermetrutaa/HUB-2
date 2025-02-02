@@ -131,6 +131,27 @@ const page = () => {
               <CardSlider/>
             </div>
           </div>
+
+          <div className='bg-[#161616] w-full h-full bg-cover bg-center'>
+            <div>
+              <Image src="/Computer-apple.svg" alt='Computer-Apple' width={439} height={317}></Image>
+            </div>
+            <div className='pt-10'>
+              <p className='text-[0.68rem] font-normal text-[#888] tracking-[0.10rem] text-center'>SOBRE NÓS</p>
+            </div>
+            <div>
+              <h2 className='text-[2rem] font-bold text-[#D9D9D9] text-center'>O que é</h2>
+            </div>
+            <div className='flex justify-center items-center pt-2'>
+              <Image src="/Logo2.svg" alt='Icon-HUB2sobre' width={270} height={63}></Image>
+            </div>
+            <div className='flex justify-center items-center pt-7'>
+              <p className='text-[0.75rem] font-light text-[#D9D9D9] max-w-[18rem]'>Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc <span className='font-bold'>vulputate libero et velit interdum</span>, ac aliquet odio mattis. Class aptent taciti <span className='font-bold'>sociosqu ad litora torquent</span> per conubia nostra, per inceptos himenaeos.</p>
+            </div>
+            <div className='flex justify-center items-center pt-6 pb-6'>
+              <button className='text-[#fff] text-[1rem] font-light px-[6.5rem] py-2 bg-[#009fe3] rounded-[0.37rem]'>Saiba mais</button>
+            </div>
+          </div>
         </div>
       </div>
     </main>

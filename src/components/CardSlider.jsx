@@ -21,6 +21,16 @@ const CardSlider = () => {
       title: 'Design Moderno',
       content: 'Lorem ipsum dolor sit amet consectetur. Iaculis vulputate odio pellentesque diam malesuada vitae in etiam aenean. Donec in tincidunt amet tortor ut. Tortor massa neque congue morbi. Orci cursus etiam pellentesque sit amet.'
     },
+    {
+      image: '/perfil.png',
+      title: 'Design Moderno',
+      content: 'Lorem ipsum dolor sit amet consectetur. Iaculis vulputate odio pellentesque diam malesuada vitae in etiam aenean. Donec in tincidunt amet tortor ut. Tortor massa neque congue morbi. Orci cursus etiam pellentesque sit amet.'
+    },
+    {
+      image: '/perfil.png',
+      title: 'Design Moderno',
+      content: 'Lorem ipsum dolor sit amet consectetur. Iaculis vulputate odio pellentesque diam malesuada vitae in etiam aenean. Donec in tincidunt amet tortor ut. Tortor massa neque congue morbi. Orci cursus etiam pellentesque sit amet.'
+    },
   ];
 
   const handlePrev = () => {

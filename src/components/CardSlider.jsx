@@ -32,12 +32,12 @@ const CardSlider = () => {
   };
 
   return (
-    <div className="max-w-[50rem] py-8">
+    <div className="max-w-[50rem] mx-auto py-8 overflow-hidden">
       {/* Controles superiores */}
       <div className="flex justify-center md:justify-end gap-4 mb-8">
         <button 
           onClick={handlePrev}
-          className="p-3 rounded-md bg-none text-white  transition-colors"
+          className="p-3 rounded-md bg-none text-white transition-colors"
         >
           ←
         </button>
@@ -49,13 +49,11 @@ const CardSlider = () => {
         </button>
       </div>
 
-      
-
       {/* Carrossel */}
-      <div className="relative h-96 ">
+      <div className="relative h-96 overflow-visible">
         <div 
           className="flex transition-transform duration-500 ease-in-out"
-          style={{ transform: `md:translateX(-${activeIndex * 35}%)`, transform: `translateX(-${activeIndex * 70}%)` }}
+          style={{ transform: `translateX(-${activeIndex * 70}%)` }}
         >
           {cards.map((card, index) => {
             const isActive = index === activeIndex;
@@ -71,8 +69,7 @@ const CardSlider = () => {
                   zIndex: isActive ? 10 : 1,
                 }}
               >
-
-                <div className='absolute  ml-7  top-[-1.5rem] z-50'>
+                <div className='absolute ml-7 top-[-1.5rem] z-50'>
                     <Image
                         src={card.image}
                         alt={card.title}
@@ -80,15 +77,13 @@ const CardSlider = () => {
                         height={53}
                     />
                 </div>
-                <div className={`relative h-[20rem] max-w-[18rem] rounded-xl shadow-lg overflow-hidden 
+                <div className={`relative h-[20rem] max-w-[18rem] rounded-xl shadow-lg overflow-visible 
                   ${isActive ? 'bg-white' : 'bg-gray-50'}`}
                 >
-                  
                   <div className="absolute mt-1 left-0 right-0 p-6 bottom-[3rem]">
                     <h3 className="text-[1rem] font-bold text-black">{card.title}</h3>
                     <p className="text-black mt-2 text-[0.70rem]">{card.content}</p>
                   </div>
-                 
                 </div>
               </div>
             )

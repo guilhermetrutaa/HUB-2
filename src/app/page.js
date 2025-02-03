@@ -152,6 +152,24 @@ const page = () => {
               <button className='text-[#fff] text-[1rem] font-light px-[6.5rem] py-2 bg-[#009fe3] rounded-[0.37rem]'>Saiba mais</button>
             </div>
           </div>
+
+          <div className='bg-[#C8C8C8] w-full h-full bg-cover bg-center'>
+            <div className='pt-16'>
+              <h1 className='text-black text-[2rem] font-bold text-center'>Chamada pra ação</h1>
+            </div>
+            <div className='flex justify-center items-center pt-2'>
+              <p className='text-[1rem] text-[#000]/75 font-normal text-center max-w-[19rem]'>Depois de ter conquistado o clientes você chama ele para um papo rápido ou um orçamento</p>
+            </div>
+            <div className='flex justify-center items-center pt-7'>
+              <input className='px-8 py-3 outline-none rounded-[0.37rem] text-[1rem] text-[#88898A' type='text' placeholder='Seu nome'></input>
+            </div>
+            <div className='flex justify-center items-center pt-3'>
+              <input className='px-8 py-3 outline-none rounded-[0.37rem] text-[1rem] text-[#88898A]' type='text' placeholder='Seu E-mail'></input>
+            </div>
+            <div className='flex justify-center items-center pt-5 pb-16'>
+              <button className='bg-[#009fe3] py-3 px-[1.6rem] text-[0.83rem] text-[#fff] font-bold'>AGENDE UM PAPO PARA CONHECER</button>
+            </div>
+          </div>
         </div>
       </div>
     </main>

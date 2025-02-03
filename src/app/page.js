@@ -161,7 +161,7 @@ const page = () => {
               <p className='text-[1rem] text-[#000]/75 font-normal text-center max-w-[19rem]'>Depois de ter conquistado o clientes você chama ele para um papo rápido ou um orçamento</p>
             </div>
             <div className='flex justify-center items-center pt-7'>
-              <input className='px-8 py-3 outline-none rounded-[0.37rem] text-[1rem] text-[#88898A' type='text' placeholder='Seu nome'></input>
+              <input className='px-8 py-3 outline-none rounded-[0.37rem] text-[1rem] text-[#88898A]' type='text' placeholder='Seu nome'></input>
             </div>
             <div className='flex justify-center items-center pt-3'>
               <input className='px-8 py-3 outline-none rounded-[0.37rem] text-[1rem] text-[#88898A]' type='text' placeholder='Seu E-mail'></input>

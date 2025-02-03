@@ -43,7 +43,13 @@ const FAQ = () => {
             onClick={() => toggleFAQ(index)}
             className="w-full text-left py-4 flex justify-between items-center focus:outline-none"
           >
-            <span className="text-lg font-medium text-[#009fe3]">{item.question}</span>
+            <span
+              className={`text-lg font-medium transition-colors ${
+                activeIndex === index ? 'text-[#009fe3]' : 'text-white'
+              }`}
+            >
+              {item.question}
+            </span>
             <span
               className={`text-xl font-light transition-colors ${
                 activeIndex === index ? 'text-[#009fe3]' : 'text-white'

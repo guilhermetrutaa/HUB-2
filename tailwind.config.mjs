@@ -17,6 +17,20 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      animation: {
+        'slider': 'slider 12s infinite linear',
+        'fade-in-out': 'fade 3s infinite'
+      },
+      keyframes: {
+        slider: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' }
+        },
+        fade: {
+          '0%, 100%': { opacity: '0' },
+          '50%': { opacity: '1' }
+        }
+      }
     },
   },
   plugins: [],

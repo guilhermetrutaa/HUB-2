@@ -1,5 +1,6 @@
 import CardSlider from '@/components/CardSlider'
 import Faq from '@/components/Faq'
+import SliderLogotipos from '@/components/SliderLogotipos'
 import Image from 'next/image'
 import React from 'react'
 
@@ -13,12 +14,12 @@ const page = () => {
           </div>
           <div className='flex justify-between gap-1 items-center'>
             <button className='border border-[#606060] font-light px-4 py-2 text-[10px] text-[#fff] rounded-[3px]'>Fale com o vendas</button>
-            <div>
+            <div className='lg:hidden'>
               <Image src="/menu-burger.svg" alt='Icon-Menu' width={24} height={24}></Image>
             </div>
           </div>
         </div>
-        <div>
+      <div>
           <div className='flex justify-center items-center mt-14'>
             <Image src="/Image-One.svg" alt='ImageOne' width={250} height={330}></Image>
           </div>
@@ -38,8 +39,8 @@ const page = () => {
           </div>
         </div>
 
-        <div className='flex justify-center items-center mt-6'>
-          <Image src="/bitpanda.svg" className='opacity-50' alt='Icon-BitPanda' width={125} height={35}></Image>
+        <div>
+          <SliderLogotipos/>
         </div>
 
         <div className='mt-2 relative w-[300px] h-[220px] mx-auto z-20'>
@@ -52,7 +53,7 @@ const page = () => {
           />
 
           <iframe 
-            className='absolute w-[242px] h-[153px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' 
+            className='absolute w-[242px] h-[153px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ' 
             src='https://www.youtube.com/embed/mPLG1Q-Hm2Q?si=YwjAwOTxIbZdLtA4'
             frameBorder="0" 
             allowFullScreen>
@@ -183,6 +184,10 @@ const page = () => {
             <div>
               <Faq/>
             </div>
+          </div>
+
+          <div>
+
           </div>
         </div>
       </div>

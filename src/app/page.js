@@ -1,4 +1,5 @@
 import CardSlider from '@/components/CardSlider'
+import Faq from '@/components/Faq'
 import Image from 'next/image'
 import React from 'react'
 
@@ -168,6 +169,19 @@ const page = () => {
             </div>
             <div className='flex justify-center items-center pt-5 pb-16'>
               <button className='bg-[#009fe3] py-3 px-[1.6rem] text-[0.83rem] text-[#fff] font-bold'>AGENDE UM PAPO PARA CONHECER</button>
+            </div>
+          </div>
+
+          <div className='bg-[#161616] w-full h-full bg-cover bg-center'>
+            <div>
+              <p className='text-[#009fe3] text-[0.75rem] font-normal text-center pt-10'>F A Q</p>
+            </div>
+            <div className='flex justify-center items-center'>
+              <h1 className='text-[#fff] text-[2.5rem] font-bold max-w-[20rem] text-center leading-[3rem]'>Perguntas Frequentes</h1>
+            </div>
+
+            <div>
+              <Faq/>
             </div>
           </div>
         </div>

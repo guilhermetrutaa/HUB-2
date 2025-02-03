@@ -148,7 +148,7 @@ const page = () => {
             <div className='flex justify-center items-center pt-7'>
               <p className='text-[0.75rem] font-light text-[#D9D9D9] max-w-[18rem]'>Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc <span className='font-bold'>vulputate libero et velit interdum</span>, ac aliquet odio mattis. Class aptent taciti <span className='font-bold'>sociosqu ad litora torquent</span> per conubia nostra, per inceptos himenaeos.</p>
             </div>
-            <div className='flex justify-center items-center pt-6 pb-6'>
+            <div className='flex justify-center items-center pt-6 pb-10'>
               <button className='text-[#fff] text-[1rem] font-light px-[6.5rem] py-2 bg-[#009fe3] rounded-[0.37rem]'>Saiba mais</button>
             </div>
           </div>

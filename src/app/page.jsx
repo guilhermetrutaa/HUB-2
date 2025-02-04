@@ -1,8 +1,10 @@
+'use client';
 import CardSlider from '@/components/CardSlider'
 import Faq from '@/components/Faq'
 import SliderLogotipos from '@/components/SliderLogotipos'
+import Footer from '@/components/Footer'
 import Image from 'next/image'
-import React from 'react'
+
 
 const page = () => {
   return (
@@ -187,7 +189,7 @@ const page = () => {
           </div>
 
           <div>
-
+            <Footer/>
           </div>
         </div>
       </div>

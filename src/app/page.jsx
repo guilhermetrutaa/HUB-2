@@ -1,6 +1,7 @@
 'use client';
 import CardSlider from '@/components/CardSlider'
 import Faq from '@/components/Faq'
+import Navbar from '@/components/Navbar'
 import SliderLogotipos from '@/components/SliderLogotipos'
 import Footer from '@/components/Footer'
 import Image from 'next/image'
@@ -10,17 +11,7 @@ const page = () => {
   return (
     <main className='w-full h-full'>
       <div style={{backgroundImage: 'url(/BG.svg)'}} className='overflow-scroll w-screen h-screen bg-no-repeat bg-center'>
-        <div className='flex justify-between py-5 px-4 items-center'>
-          <div>
-            <Image src="/Logo.svg" alt='Logo-Hub2' width={90} height={30}></Image>
-          </div>
-          <div className='flex justify-between gap-1 items-center'>
-            <button className='border border-[#606060] font-light px-4 py-2 text-[10px] text-[#fff] rounded-[3px]'>Fale com o vendas</button>
-            <div className='lg:hidden'>
-              <Image src="/menu-burger.svg" alt='Icon-Menu' width={24} height={24}></Image>
-            </div>
-          </div>
-        </div>
+        <Navbar/>
       <div>
           <div className='flex justify-center items-center mt-14'>
             <Image src="/Image-One.svg" alt='ImageOne' width={250} height={330}></Image>

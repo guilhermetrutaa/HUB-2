@@ -12,26 +12,35 @@ const Navbar = () => {
   // Seções do menu
   const menuSections = [
     { name: 'Início', id: '#home' },
-    { name: 'Sobre Nós', id: '#about' },
-    { name: 'Serviços', id: '#services' },
-    { name: 'Portfólio', id: '#portfolio' },
-    { name: 'Contato', id: '#contact' }
+    { name: 'Solução HUB2', id: '#about' },
+    { name: 'FeedBacks', id: '#services' },
+    { name: 'Sobre Nós', id: '#portfolio' },
+    { name: 'Contato', id: '#contact' },
+    { name: 'FAQ', id: '#faq' }
   ]
 
   return (
     <div className="relative">
       <div className='flex justify-between py-5 px-4 items-center'>
         <div>
-          <Image 
+          <Image  
             src="/Logo.svg" 
             alt='Logo-Hub2' 
             width={90} 
             height={30}
+            className='lg:hidden'
+          />
+          <Image  
+            src="/Logo-Laptop.svg" 
+            alt='Logo-LaptopHub2' 
+            width={50} 
+            height={50}
+            className='lg:block sm:hidden md:hidden lg:ml-10'
           />
         </div>
         
         {/* Menu desktop (hidden on mobile) */}
-        <div className='hidden lg:flex gap-6 items-center'>
+        <div className='hidden lg:flex gap-6 items-center mr-10'>
           {menuSections.map((section) => (
             <a 
               key={section.id}
@@ -46,8 +55,16 @@ const Navbar = () => {
           </button>
         </div>
 
+
+      
+
         {/* Menu mobile */}
-        <div className='lg:hidden'>
+        <div className='lg:hidden flex'>
+          <div className='mr-2'>
+                <button className='w-full text-center border border-[#606060] font-light px-4 py-2 text-[10px] text-[#fff] rounded-[3px] hover:bg-[#009FE3] hover:border-transparent transition-colors'>
+                  Fale com o vendas
+                </button>
+          </div>
           <button 
             onClick={toggleMenu}
             className='focus:outline-none'
@@ -64,7 +81,7 @@ const Navbar = () => {
 
       {/* Dropdown menu mobile */}
       {isMenuOpen && (
-        <div className='lg:hidden absolute top-full right-0 w-full bg-[#333] z-50 shadow-lg'>
+        <div className='lg:hidden absolute top-full right-0 w-full bg-[#333] z-50 shadow-lg transition-all duration-300'>
           <div className='px-4 py-6 space-y-4'>
             {menuSections.map((section) => (
               <a
@@ -76,11 +93,6 @@ const Navbar = () => {
                 {section.name}
               </a>
             ))}
-            <div className='pt-4 border-t border-[#606060]'>
-              <button className='w-full text-center border border-[#606060] font-light px-4 py-2 text-[10px] text-[#fff] rounded-[3px] hover:bg-[#009FE3] hover:border-transparent transition-colors'>
-                Fale com o vendas
-              </button>
-            </div>
           </div>
         </div>
       )}

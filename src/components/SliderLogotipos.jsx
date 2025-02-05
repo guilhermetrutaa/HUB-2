@@ -19,13 +19,13 @@ const SliderLogotipos = () => {
   const duplicatedLogos = [...logos, ...logos]
 
   return (
-    <div className="relative h-6 w-full overflow-hidden mt-8">
+    <div className="relative h-6 w-full overflow-hidden mt-8 md:p-10">
       <div className="flex absolute inset-0 animate-slider space-x-8">
         {duplicatedLogos.map((logo, index) => (
           <div
             key={`${logo.src}-${index}`} 
             className="relative h-full flex-shrink-0 flex items-center justify-center"
-            style={{ width: 'calc(100% / 6)' }} 
+            style={{ width: 'calc(100% / 6)'}} 
           >
             <div className="flex items-center justify-center w-full h-full opacity-50 hover:opacity-100 transition-opacity duration-300">
               <Image

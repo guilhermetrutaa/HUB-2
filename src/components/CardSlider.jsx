@@ -44,7 +44,7 @@ const CardSlider = () => {
   return (
     <div className="max-w-[50rem] mx-auto py-8 overflow-hidden">
       {/* Controles superiores */}
-      <div className="flex justify-center md:justify-end gap-4 mb-8">
+      <div className="flex justify-center md:pb-5 lg:justify-end">
         <button 
           onClick={handlePrev}
           className="p-3 rounded-md bg-none text-white transition-colors"
@@ -87,10 +87,10 @@ const CardSlider = () => {
                         height={53}
                     />
                 </div>
-                <div className={`relative h-[20rem] max-w-[18rem] rounded-xl shadow-lg overflow-visible 
+                <div className={`relative h-[20rem] max-w-[18rem] rounded-xl shadow-lg overflow-visible  
                   ${isActive ? 'bg-white' : 'bg-gray-50'}`}
                 >
-                  <div className="absolute mt-1 left-0 right-0 p-6 bottom-[3rem]">
+                  <div className="absolute mt-1 left-0 right-0 p-6 bottom-[3rem] sm:bottom-[5.5rem]">
                     <h3 className="text-[1rem] font-bold text-black">{card.title}</h3>
                     <p className="text-black mt-2 text-[0.70rem]">{card.content}</p>
                   </div>

@@ -395,7 +395,7 @@ const page = () => {
             <Footer/>
           </div>
 
-          <div className='lg:block'>
+          <div className='lg:block sm:hidden md:hidden'>
             <FooterDdois/>
           </div>
         </div>

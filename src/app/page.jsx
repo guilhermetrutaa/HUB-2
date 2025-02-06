@@ -15,7 +15,7 @@ const page = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
+  
   // Updated menu sections with scroll configuration
   const menuSections = [
     { name: 'Início', id: 'home' },
@@ -356,10 +356,11 @@ const page = () => {
             </div>
           </div>
           
-
-          <section id='about'></section>
+              <section id='about'></section>
+          
           <div className='bg-[#161616] w-full h-full bg-cover bg-center lg:hidden'>
             <div >
+            <section id='about'></section>
               <Image src="/Computer-apple.svg" alt='Computer-Apple' width={450} height={317} className='md:w-full '></Image>
             </div>
             <div className='pt-10'>
@@ -405,8 +406,7 @@ const page = () => {
                 </div>
               </h2>
 
-              
-        
+
               
 
               <p className="text-[1rem] font-light text-[#D9D9D9] max-w-[30rem] pt-7 lg:text-left text-center">
@@ -430,7 +430,8 @@ const page = () => {
             </div>
           </div>
         
-          <section id='contact'></section>
+
+        <section id='contact'>
 
           <div className='bg-[#C8C8C8] w-full h-full bg-cover bg-center lg:hidden'>
             <div className='pt-16'>
@@ -471,7 +472,7 @@ const page = () => {
               </div>
             </div>
           </div>
-
+          </section>
 
           <section id='faq'>
 

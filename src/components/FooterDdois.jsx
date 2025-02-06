@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { Link } from 'react-scroll';
 
 const Footer = () => {
   return (
@@ -23,15 +24,21 @@ const Footer = () => {
         </div>
 
         <div>
-          <a href="/">
-          <Image 
-            src="/Button_Arrow.svg" 
-            alt='Icon-ButtonArroww' 
-            width={20} 
+      <Link
+        to="home" // Alvo para rolar
+        smooth={true} // Rolagem suave
+        duration={500} // Duração da rolagem em milissegundos
+      >
+        <button style={{ background: 'none', border: 'none' }}>
+          <Image
+            src="/Button_Arrow.svg"
+            alt="Icon-ButtonArrow"
+            width={20}
             height={20}
           />
-          </a>
-        </div>
+        </button>
+      </Link>
+    </div>
       </div>
     </div>
   );

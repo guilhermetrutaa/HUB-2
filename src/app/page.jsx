@@ -2,19 +2,121 @@
 import CardSlider from '@/components/CardSlider'
 import Faq from '@/components/Faq'
 import FaqDois from '@/components/FaqDois'
-import Navbar from '@/components/Navbar'
 import SliderLogotipos from '@/components/SliderLogotipos'
 import Footer from '@/components/Footer'
 import FooterDdois from '@/components/FooterDdois'
 import Image from 'next/image'
-
-
+import { useState } from 'react';
+import { Link as ScrollLink } from 'react-scroll';
 
 const page = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+  
+  // Updated menu sections with scroll configuration
+  const menuSections = [
+    { name: 'Início', id: 'home' },
+    { name: 'Solução HUB2', id: 'solution' },
+    { name: 'FeedBacks', id: 'feedback' },
+    { name: 'Sobre Nós', id: 'about' },
+    { name: 'Contato', id: 'contact' },
+    { name: 'FAQ', id: 'faq' }
+  ];
+
+  // Shared scroll configuration
+  const scrollConfig = {
+    smooth: true,
+    duration: 400,
+    spy: true,
+    
+  };
   return (
-    <main className='w-full h-full'>
-      <div style={{backgroundImage: 'url(/BG.svg)'}} className='overflow-scroll w-screen h-screen bg-no-repeat bg-center lg:overflow-x-hidden'>
-        <Navbar/>
+    
+    <main style={{backgroundImage: 'url(/BG.svg)'}} className='relative min-h-screen bg-auto w-full max-w-[100vw]'>
+      <div  className='relative min-h-screen w-full'>
+      <section id='home'>
+        <div className="">
+          <div className='flex justify-between py-5 px-4 items-center'>
+            <div>
+              <Image  
+                src="/Logo.svg" 
+                alt='Logo-Hub2' 
+                width={90} 
+                height={30}
+                className='lg:hidden'
+              />
+              <Image  
+                src="/Logo-Laptop.svg" 
+                alt='Logo-LaptopHub2' 
+                width={50} 
+                height={50}
+                className='hidden lg:block lg:ml-10'
+              />
+            </div>
+            
+            {/* Desktop Menu with Scroll */}
+            <div className='hidden lg:flex gap-6 items-center mr-10'>
+              {menuSections.map((section) => (
+                <ScrollLink 
+                  key={section.id}
+                  to={section.id} 
+                  className='text-[#fff] text-sm hover:text-[#009FE3] transition-colors cursor-pointer'
+                  activeClass="text-[#009FE3]"
+                  {...scrollConfig}
+                >
+                  {section.name}
+                </ScrollLink>
+              ))}
+              <button className='border border-[#606060] font-light px-4 py-2 text-[10px] text-[#fff] rounded-[3px] hover:bg-[#009FE3] hover:border-transparent transition-colors'>
+                Fale com o vendas
+              </button>
+            </div>
+    
+            {/* Mobile Menu Button */}
+            <div className='lg:hidden flex z-[100]'>
+              <div className='mr-2'>
+                <button className='w-full text-center border border-[#606060] font-light px-4 py-2 text-[10px] text-[#fff] rounded-[3px] hover:bg-[#009FE3] hover:border-transparent transition-colors'>
+                  Fale com o vendas
+                </button>
+              </div>
+              <button 
+                onClick={toggleMenu}
+                className='focus:outline-none'
+              >
+                <Image 
+                  src={isMenuOpen ? "/menu-close.svg" : "/menu-burger.svg"} 
+                  alt='Icon-Menu' 
+                  width={24} 
+                  height={24}
+                />
+              </button>
+            </div>
+          </div>
+    
+          {/* Mobile Menu Dropdown with Scroll */}
+          {isMenuOpen && (
+            <div className='lg:hidden relative top-full right-0 w-full bg-[#333] z-50 shadow-lg transition-all duration-300'>
+              <div className='px-4 py-6 space-y-4'>
+                {menuSections.map((section) => (
+                  <ScrollLink
+                    key={section.id}
+                    to={section.id}
+                    className='block text-[#fff] py-2 px-4 hover:bg-[#009FE3] rounded-md transition-colors cursor-pointer'
+                    onClick={() => setIsMenuOpen(false)}
+                    {...scrollConfig}
+                  >
+                    {section.name}
+                  </ScrollLink>
+                ))}
+              </div>
+            </div>
+          )}
+          </div>
+
+    
       <div>
           <div className='flex justify-center items-center mt-14'>
             <Image src="/Image-One.svg" alt='ImageOne' width={250} height={330} className='lg:hidden'></Image>
@@ -24,10 +126,10 @@ const page = () => {
         <div className='mt-6 lg:mb-36'>
           <div>
             <h1 className='text-[2rem] font-bold text-[#fff] text-center leading-[2rem] lg:hidden'>Headline<br/> Chamativa</h1>
-            <h1 className='text-[3rem] font-bold text-[#fff] text-center sm:hidden md:hidden lg:block'>Headline Chamativa</h1>
+            <h1 className='text-[3rem] font-bold text-[#fff] text-center hidden lg:block'>Headline Chamativa</h1>
             <p className='text-[0.75rem] mx-4 mt-[0.50rem] text-[#ffffff]/75 text-center lg:hidden'>Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum</p>
-            <div className='sm:hidden md:hidden lg:flex lg:justify-center lg:items-center'>
-              <p className='text-[1.3rem] mx-4 mt-[0.50rem] max-w-[52rem] text-[#ffffff]/75 text-center sm:hidden md:hidden lg:block lg:justify-center'>Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+            <div className='hidden lg:flex lg:justify-center lg:items-center'>
+              <p className='text-[1.3rem] mx-4 mt-[0.50rem] max-w-[52rem] text-[#ffffff]/75 text-center hidden lg:block lg:justify-center'>Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
             </div>
           </div>
           <div className='flex justify-center mt-5'>
@@ -37,13 +139,13 @@ const page = () => {
             <Image src="/checkmark-circle.svg" alt='Icon-CheckMark' width={8} height={8}></Image>
             <span className='text-[0.50rem] font-medium text-[#fff]/50'>Ligação de 30 minutos sem compromisso</span>
           </div>
-          <div className='sm:hidden md:hidden lg:flex lg:items-center lg:justify-center'>
+          <div className='hidden lg:flex lg:items-center lg:justify-center'>
             <Image src="/logos_Placeholders.svg" alt='logos-PlaceHolders' width={1000} height={148}></Image>
           </div>
           
         </div>
 
-        <div className='lg:hidden'>
+        <div  className='lg:hidden'>
           <SliderLogotipos/>
         </div>
 
@@ -54,7 +156,7 @@ const page = () => {
             alt='Notificacoes-Imagem' 
             width={321} 
             height={462}
-            className="h-full w-full object-contain sm:hidden md:hidden lg:block"
+            className="h-full w-full object-contain hidden lg:block"
           />
 
           <Image 
@@ -62,7 +164,7 @@ const page = () => {
             alt='Icon-Laptop' 
             width={390} 
             height={220}
-            className="h-full object-contain lg:w-[37.5rem] lg:h-[37.5rem]"
+            className="h-full w-full object-contain lg:w-[37.5rem] lg:h-[37.5rem]"
           />
 
           <Image 
@@ -70,19 +172,22 @@ const page = () => {
             alt='Flow-Imagem' 
             width={366} 
             height={453}
-            className="h-full w-full object-contain sm:hidden md:hidden lg:block"
+            className="h-full w-full object-contain hidden lg:block"
           />
 
           
 
           <iframe 
-            className='absolute w-[242px] h-[153px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:w-[245px] sm:h-[160px] md:w-[300px] md:h-[200px] lg:w-[490px] lg:h-[310px] lg:top-[45%] lg:left-[48%]' 
+            className='absolute w-[242px] h-[158px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:w-[245px] sm:h-[160px] md:w-[300px] md:h-[200px] lg:w-[490px] lg:h-[310px] lg:top-[45%] lg:left-[48%]' 
             src='https://www.youtube.com/embed/mPLG1Q-Hm2Q?si=YwjAwOTxIbZdLtA4'
             frameBorder="0" 
             allowFullScreen>
           </iframe>
         </div>
+      </section>
 
+
+      <section id='solution'>
         <div style={{ backgroundImage: 'url(/BG2.svg)' }} className='relative -mt-[5rem] w-full min-h-full z-10 bg-cover lg:hidden'>
           <div className='pt-20 md:pt-28'>
             <div className='flex justify-center items-center'>
@@ -115,11 +220,12 @@ const page = () => {
             </div>
           </div>
         </div>
+        </section>
 
-
+      
         <div
         style={{ backgroundImage: 'url(/BG2.svg)' }}
-        className="relative -mt-[5rem] w-full min-h-screen z-10 bg-cover sm:hidden md:hidden lg:block"
+        className="relative -mt-[5rem] w-full min-h-screen z-10 bg-cover hidden lg:block"
         >
         <div className="pt-20 md:pt-28">
           <div className="flex justify-center items-center">
@@ -152,20 +258,22 @@ const page = () => {
             </div>
           </div>
         </div>
-
+       
+        <section id='feedback'></section>
+        
         <div className='relative'>
           <div style={{ backgroundImage: 'url(/BG3.svg)' }} className='w-full h-full bg-cover bg-center'>
             <div className='pt-9  lg:flex lg:justify-center lg:items-center lg:gap-10 lg:pt-10 lg:pb-10'>
               <div className='flex justify-center items-center'>
                 <h2 className='text-[2rem] font-semibold max-w-[14rem] text-center leading-[2rem]'>Lorem ipsum <span className='text-[#009FE3]'>sit amet</span></h2>
               </div>
-              <div className='flex justify-center items-center pt-9 lg:pt-0 sm:hidden md:hidden lg:flex'>
+              <div className='justify-center items-center pt-9 lg:pt-0 hidden lg:flex'>
                 <Image src="/clock.svg" alt='Icon-Clock' width={50} height={50}></Image>
                 <div className='flex justify-center items-center pt-4 lg:pt-0'>
                   <p className='text-[1rem] text-[#959595] max-w-[10rem] text-center'>nterdum, ac aliquet odio m</p>
                 </div>
               </div>
-              <div className='flex justify-center items-center pt-9 lg:pt-0 sm:hidden md:hidden lg:flex'>
+              <div className='justify-center items-center pt-9 lg:pt-0 hidden lg:flex'>
                 <Image src="/cifrao.svg" alt='Icon-Cifrao' width={37} height={50}></Image>
                 <div className='flex justify-center items-center pt-4 lg:pt-0'>
                   <p className='text-[1rem] text-[#959595] max-w-[10rem] text-center'>nterdum, ac aliquet odio m</p>
@@ -196,6 +304,8 @@ const page = () => {
               <Image src="/Detalhe.svg" alt='Detalhe' width={72} height={87}></Image>
             </div>
 
+            
+
           <div style={{ backgroundImage: 'url(/BG4.svg)' }} className='w-full h-full bg-cover bg-center lg:hidden'>
             <div className='flex justify-center items-center '>
               <p className='text-[0.68rem] text-[#888] tracking-[0.10rem] pt-12'>FEEDBACKS</p>
@@ -214,18 +324,23 @@ const page = () => {
             </div>
           </div>
 
+
+          
           <div
             style={{ backgroundImage: 'url(/BG4.svg)' }}
-            className="w-full h-full bg-cover bg-center py-16 px-6 lg:px-16 sm:hidden md:hidden lg:block"
+            className="w-full h-full bg-cover bg-center py-16 px-6 lg:px-16 hidden lg:block"
           >
             <div className="max-w-7xl mx-auto">
               {/* Container principal */}
               <div className="lg:flex lg:items-center lg:justify-between">
                 {/* Cards mais próximos da borda */}
+
+                
                 <div className="lg:w-2/3 lg:-ml-[5rem]">
                   <CardSlider />
                 </div>
 
+                
                 {/* Texto */}
                 <div className="lg:w-1/3 lg:pl-1 lg:mb-24">
                   <p className="text-[0.68rem] text-[#888] tracking-[0.10rem] uppercase mb-1">FEEDBACKS</p>
@@ -240,8 +355,9 @@ const page = () => {
               </div>
             </div>
           </div>
+          
 
-
+          <section id='about'></section>
           <div className='bg-[#161616] w-full h-full bg-cover bg-center lg:hidden'>
             <div >
               <Image src="/Computer-apple.svg" alt='Computer-Apple' width={450} height={317} className='md:w-full '></Image>
@@ -262,9 +378,9 @@ const page = () => {
               <button className='text-[#fff] text-[1rem] font-light px-[6.5rem] py-2 bg-[#009fe3] rounded-[0.37rem]'>Saiba mais</button>
             </div>
           </div>
-
+          
           {/* testeeeeeee */}
-          <div style={{ backgroundImage: 'url(/BG6.svg)' }} className="w-full h-full bg-cover bg-center flex sm:hidden md:hidden lg:flex"> 
+          <div style={{ backgroundImage: 'url(/BG6.svg)' }} className="w-full h-full bg-cover bg-center hidden lg:flex"> 
             {/* Imagem - Ocupa toda a esquerda, encostando nas bordas */}
             <div className="relative w-1/2 h-screen">
               <Image
@@ -275,7 +391,7 @@ const page = () => {
                 className="absolute inset-0 rounded-r-[4.25rem]"
               />
             </div>
-
+           
             {/* Conteúdo - Fica à direita */}
             <div className="w-1/2 flex flex-col justify-center px-6 lg:px-16">
               <p className="text-[0.68rem] font-normal text-[#888] tracking-[0.10rem] lg:text-left text-center">
@@ -289,7 +405,8 @@ const page = () => {
                 </div>
               </h2>
 
-
+              
+        
               
 
               <p className="text-[1rem] font-light text-[#D9D9D9] max-w-[30rem] pt-7 lg:text-left text-center">
@@ -312,7 +429,8 @@ const page = () => {
               </div>
             </div>
           </div>
-
+        
+          <section id='contact'></section>
 
           <div className='bg-[#C8C8C8] w-full h-full bg-cover bg-center lg:hidden'>
             <div className='pt-16'>
@@ -334,7 +452,7 @@ const page = () => {
             </div>
           </div>
 
-          <div className='bg-[#C8C8C8] w-full h-full bg-cover bg-center sm:hidden md:hidden lg:block'>
+          <div className='bg-[#C8C8C8] w-full h-full bg-cover bg-center hidden lg:block'>
             <div className='pt-16'>
               <h1 className='text-black text-[2rem] font-bold text-center lg:text-[4rem]'>Chamada pra ação</h1>
             </div>
@@ -354,6 +472,9 @@ const page = () => {
             </div>
           </div>
 
+
+          <section id='faq'>
+
           <div className='bg-[#161616] w-full h-full bg-cover bg-center lg:hidden'>
             <div>
               <p className='text-[#009fe3] text-[0.75rem] font-normal text-center pt-10'>F A Q</p>
@@ -369,15 +490,16 @@ const page = () => {
 
           <div 
             style={{ backgroundImage: 'url(/BG8.svg)' }}  
-            className="w-full min-h-screen bg-cover bg-center py-10 sm:hidden md:hidden lg:block"
+            className="w-full min-h-screen bg-cover bg-center py-10 hidden lg:block"
           >
             <div className="hidden lg:flex lg:max-w-6xl lg:mx-auto lg:relative lg:overflow-hidden pt-24">
               
               {/* Esquerda - FAQ */}
+              
               <div className="w-1/2 ml-44">
                 <FaqDois />
               </div>
-
+             
               {/* Direita - Título */}
               <div className="w-1/2 flex flex-col justify-center pl-8">
                 <p className="text-[#009fe3] text-xs font-normal mb-2">F A Q</p>
@@ -388,14 +510,14 @@ const page = () => {
 
             </div>
           </div>
-
+        </section>
 
 
           <div className='lg:hidden'>
             <Footer/>
           </div>
 
-          <div className='lg:block sm:hidden md:hidden'>
+          <div className='lg:block hidden'>
             <FooterDdois/>
           </div>
         </div>

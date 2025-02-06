@@ -15,7 +15,7 @@ const page = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  
+
   // Updated menu sections with scroll configuration
   const menuSections = [
     { name: 'Início', id: 'home' },
@@ -31,7 +31,7 @@ const page = () => {
     smooth: true,
     duration: 400,
     spy: true,
-    
+
   };
   return (
     
